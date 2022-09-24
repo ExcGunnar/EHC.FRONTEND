@@ -69,8 +69,8 @@ const App = () => {
                 {currentUser.username}
               </Link>
             </li>
-            <li className="nav-item">
-              <a href="/login" className="nav-link" onClick={logOut}>
+            <li data-testid="login" className="nav-item"> 
+              <a href="/login" className="nav-link" onClick={logOut}> 
                 LogOut
               </a>
             </li>

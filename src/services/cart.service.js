@@ -35,6 +35,13 @@ const placeOrder = (userId, cartItems) => {
 const findByDisease = desc => {
   return http.get(`Medicine/Search/${desc}`, config);
 };
+
+const getAllOrderDetails = () => {
+ return http.get('Cart/GetAllOrderDetails', config);
+  ;
+};
+
+
 const CartService = {
   getAllProducts,
   getCartItems,
@@ -43,7 +50,8 @@ const CartService = {
   placeOrder,
   findByDisease,
   removeFromCart,
-  removeAllFromCart
+  removeAllFromCart,
+  getAllOrderDetails
 //   update,
 //   remove,
 //   removeAll,
