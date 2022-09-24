@@ -106,7 +106,7 @@ render() {
             </div>
                 
             </form>
-            <span style={{'color':'red'}}>{this.state.message}</span>
+            <span id="returnMessage" style={{'color':'red'}}>{this.state.message}</span>
         </div>
     )
 }

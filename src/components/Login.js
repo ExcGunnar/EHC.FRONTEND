@@ -63,9 +63,9 @@ const Login = () => {
           alt="profile-img"
           className="profile-img-card"
         />
-        <Form onSubmit={handleLogin} ref={form}>
+        <Form onSubmit={handleLogin} ref={form} data-testid="loginForm">
           <div className="form-group">
-            <label htmlFor="username">Username</label>
+            <label data-testid="loginUsername" htmlFor="username">Username</label>
             <Input
               type="text"
               className="form-control"
@@ -76,7 +76,7 @@ const Login = () => {
             />
           </div>
           <div className="form-group">
-            <label htmlFor="password">Password</label>
+            <label data-testid="loginPassword" htmlFor="password">Password</label>
             <Input
               type="password"
               className="form-control"
@@ -87,7 +87,7 @@ const Login = () => {
             />
           </div>
           <div className="form-group">
-            <button className="btn btn-primary btn-block" disabled={loading}>
+            <button data-testid="loginButton" className="btn btn-primary btn-block" disabled={loading}>
               {loading && (
                 <span className="spinner-border spinner-border-sm"></span>
               )}
