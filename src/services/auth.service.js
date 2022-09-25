@@ -1,6 +1,6 @@
 import axios from "axios";
 const API_URL = "http://localhost:5000/Ehc/";
-const register = (firstName, lastName, email, password, dateOfBirth, phone, address) => {//username, 
+const register = (firstName, lastName, email, password, dateOfBirth, phone, address) => { 
   return axios.post(API_URL + "User/SignUp", {
     id: 0,
     firstName,
@@ -13,7 +13,7 @@ const register = (firstName, lastName, email, password, dateOfBirth, phone, addr
     address
   });
 };
-const login = (email, password) => {//changed from username
+const login = (email, password) => {
   return axios
     .post(API_URL + "User/SignIn", {
       email,
@@ -21,7 +21,7 @@ const login = (email, password) => {//changed from username
       IsAdmin : 'false'
     })
     .then((response) => {
-      if (response.data) {//.accessToken
+      if (response.data) {
         window.sessionStorage.setItem("user", JSON.stringify(response.data));
       }
       return response.data;

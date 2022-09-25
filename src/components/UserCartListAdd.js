@@ -104,13 +104,6 @@ const UserCartListAdd = () => {
               </li>
             ))}
         </ul>
-
-        {/* <button
-          className="m-3 btn btn-sm btn-danger"
-          onClick={removeAllTutorials}
-        >
-          Remove All
-        </button> */}
       </div>
       <div className="col-md-6">
         {currentItem ? (
@@ -165,13 +158,6 @@ const UserCartListAdd = () => {
         >
           Add Selected To Cart
         </button>
-
-            {/* <Link
-              to={"/users/" + currentItem.id}
-              className="badge badge-warning"
-            >
-              Edit
-            </Link> */}
           </div>
         ) : (
           <div>

@@ -37,25 +37,6 @@ constructor(props){
 //   })
 
     render(){
-
-
-        //   const data = CartService.getAllOrderDetails();
-        //   const other = {
-        //     results: ''
-        //   };
-
-        //   const orderDetails = axios.get(API_URL + "/GetAllOrderDetails", config).
-        //   then(response=> {
-        //     if(response.status==200){
-        //        (this.setState({response}))
-        //     }
-        //     console.log(response)
-        // }).catch(error=> {
-        //     console.log(error)
-        //     });
-        
-
-
         console.log()
         return(
             

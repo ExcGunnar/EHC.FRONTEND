@@ -22,7 +22,7 @@ const UserCartItems = () => {
   };
 
   const retrieveCartItems = () => {
-    CartService.getCartItems(user.id)//user.id, currentItem.id.toString(),
+    CartService.getCartItems(user.id)
       .then(response => {
         setCartItems(response.data);
         console.log(response.data);
@@ -100,15 +100,10 @@ const UserCartItems = () => {
       <li
           className={
             "list-group-item " 
-            //+ (index === currentIndex ? "active" : "")
           }
-          // onClick={() => setActiveProduct(item, index) }
-          // key={index}
         >
-          {/* {item.product.name} */}
         </li>)
-      // cartItems &&
-      // cartItems.map((item, index) => (
+
 
     }
   }
@@ -125,53 +120,15 @@ const UserCartItems = () => {
   };
     return (
      <div className="col-md-12">
-      {/* <div className="card card-container">
-        <div className="input-group mb-3">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Search by Disease"
-            value={currentDesc}
-            onChange={onChangeCurrentItem}
-          />
-          <div className="input-group-append">
-            <button
-              className="btn btn-outline-secondary"
-              type="button"
-              onClick={findByDisease}
-            >
-              Search
-            </button>
-          </div>
-        </div>
-      </div> */}
       <div className="col-md-6">
         <h4>Cart List</h4>
 
         <ul className="list-group">
           {
-          // cartItems &&
-          //   cartItems.map((item, index) => (
-          //     <li
-          //       className={
-          //         "list-group-item " + (index === currentIndex ? "active" : "")
-          //       }
-          //       onClick={() => setActiveProduct(item, index) }
-          //       key={index}
-          //     >
-          //       {item.product.name}
-          //     </li>
-          //   ))
           emptyList(cartItems)
             }
         </ul>
 
-        {/* <button
-          className="m-3 btn btn-sm btn-danger"
-          onClick={removeAllTutorials}
-        >
-          Remove All
-        </button> */}
       </div>
       <div className="col-md-6">
         {currentItem ? (
@@ -227,13 +184,6 @@ const UserCartItems = () => {
         >
           Remove Selected From Cart
         </button>
-
-            {/* <Link
-              to={"/users/" + currentItem.id}
-              className="badge badge-warning"
-            >
-              Edit
-            </Link> */}
           </div>
           
         ) : (
@@ -272,16 +222,3 @@ const UserCartItems = () => {
 };
 
 export default UserCartItems;
-
-// public int OrderId { get; set; }
-
-// [ForeignKey("UserModel")]
-// public long UserId { get; set; }
-
-// public string Item { get; set; }
-
-// public decimal Amount { get; set; }
-
-// public DateTime PlacedOn { get; set; }
-
-// public string OrderStatus { get; set; }

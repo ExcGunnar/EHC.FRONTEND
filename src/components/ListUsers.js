@@ -63,26 +63,6 @@ const ListUsers = () => {
   };
     return (
      <div className="col-md-12">
-      {/* <div className="card card-container">
-        <div className="input-group mb-3">
-          <input
-            type="text"
-            className="form-control"
-            placeholder="Search by Email"
-            value={currentEmail}
-            onChange={onChangeCurrentEmail}
-          />
-          <div className="input-group-append">
-            <button
-              className="btn btn-outline-secondary"
-              type="button"
-              onClick={findByEmail}
-            >
-              Search
-            </button>
-          </div>
-        </div>
-      </div> */}
       <div className="col-md-6">
         <h4>Users List - Click on User for Details</h4>
 
@@ -100,13 +80,6 @@ const ListUsers = () => {
               </li>
             ))}
         </ul>
-
-        {/* <button
-          className="m-3 btn btn-sm btn-danger"
-          onClick={removeAllTutorials}
-        >
-          Remove All
-        </button> */}
       </div>
       <div className="col-md-6">
         {currentUser ? (

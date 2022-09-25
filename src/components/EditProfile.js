@@ -46,13 +46,6 @@ class UpdateUser extends Component {
                 <div className="row">
                     <div className="col-md-8"><h2>Update User Details</h2></div>
                 </div>
-
-                {/* <div className="row">
-                    <div className="col-md-4"><label>Id - Used to Select User</label></div>
-                    <div className="col-md-4"><input type="number" name="id"  
-                    onChange={this.changeHandle} className="form-control"/></div>
-                </div>  */}
-
                 <div className="row">
                     <div className="col-md-4"><label>First Name</label></div>
                     <div className="col-md-4"><input type="text" name="firstName"  

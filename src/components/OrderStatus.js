@@ -16,11 +16,8 @@ constructor(props) {
     this.state= {orderFields:{}}
 }
 
-
-
 changeHandle=(event)=> {
     let orderFields = this.state.orderFields;
-    // orderFields.id = 0;
     orderFields[event.target.name]=event.target.value;
     this.setState({orderFields:orderFields});
   

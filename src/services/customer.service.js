@@ -12,25 +12,14 @@ const getAll = () => {
 const get = id => {
   return http.get(`User/FindUserById/${id}`, config);
 };
-// const update = (id, data) => {
-//   return http.put(`/tutorials/${id}`, data);
-// };
-// const remove = id => {
-//   return http.delete(`/DeleteUserById/${id}`);
-// };
-// const removeAll = () => {
-//   return http.delete(`/tutorials`);
-// };
+
 const findByEmail = email => {
   return http.get(`User/FindUserByEmail/${email}`, config);
 };
 const CustomerService = {
   getAll,
   get,
-//   create,
-//   update,
-//   remove,
-//   removeAll,
+  
 findByEmail
 };
 export default CustomerService;
