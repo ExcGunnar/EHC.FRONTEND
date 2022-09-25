@@ -17,24 +17,11 @@ const config = {
     }
   };
 
-
-
-// const orderDetailsData = retrieveCartItems();
-
 class Profile extends Component {
 constructor(props){
     super(props);
-    // this.state = {oDs: []};
-
- 
-//potentially set state here
     
 }
-
-// .then(response => {
-//     setOrderDetails(response.data);
-//     console.log(response.data);
-//   })
 
     render(){
         console.log()
