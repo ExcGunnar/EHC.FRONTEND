@@ -4,41 +4,36 @@ import { useNavigate } from 'react-router-dom';
 import CartService from "../services/cart.service";
 import { Link } from "react-router-dom";
 import Table from "./Table";
-
-
-const user = JSON.parse(window.sessionStorage.getItem("user"));
-
+import tableData1 from "./tableData1.json"
 
 const ReportTable = () => {
   const [items, setOrderDetails] = useState([]);
 
 
-  useEffect(() => {
-    retrieveOrderDetails();
-  }, []);
+//   useEffect(() => {
+//     retrieveOrderDetails();
+//   }, []);
 
-  const retrieveOrderDetails = () => {
-    CartService.getAllOrderDetails()
-      .then(response => {
-        setOrderDetails(response.data);
-        console.log(response.data);
-      })
-      .catch(e => {
-        console.log(e);
-      });
-  };
+//   const retrieveOrderDetails = () => {
+
+//   };
+
+  CartService.getAllOrderDetails()
+  .then(response => {
+    setOrderDetails(response.data);
+    console.log(response.data);
+  })
+  .catch(e => {
+    console.log(e);
+  });
 
   const columns = [
     // { label: "Id", accessor: "id", sortable: true },
     { label: "OrderId", accessor: "orderId", sortable: true },
     { label: "UserId", accessor: "userId", sortable: true },//order id, userid, itemName, itemAmount, placedon
-    { label: "ItemName", accessor: "ItemName", sortable: true,},
+    { label: "ItemName", accessor: "itemName", sortable: true,},
     { label: "ItemAmount", accessor: "itemAmount", sortable: true },
     { label: "PlacedOn", accessor: "placedOn", sortable: true }
-
-
-
-
   ];
 
 //   const refreshList = () => {

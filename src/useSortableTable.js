@@ -41,10 +41,10 @@ export const useSortableTable = (data, columns) => {
         );
       });
       setTableData(sorted);
-    }
-      else
-  {
-    return data;
+//     }
+//       else
+//   {
+//     return data;
   }
   };
 
