@@ -39,7 +39,9 @@ constructor(props){
                 <ListUsers />
             </div>
             <div>
+
                 <ReportTable />
+
             </div>
             </div>
         )

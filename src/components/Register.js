@@ -205,6 +205,7 @@ export default class Register extends Component {
             className="profile-img-card"
           />
            <span style={{'color':'red'}}>{this.state.message}</span>
+           <span style={{'color':'red'}}>{"Upon successful registry, form will shrink. Please navigate to sign in with your credentials."}</span>
 
           <Form
             onSubmit={this.handleRegister}
@@ -308,7 +309,7 @@ export default class Register extends Component {
                   }
                   role="alert"
                 >
-                  {this.state.message}
+                  {"Successfully Registered: " + this.state.successful}
                 </div>
               </div>
             )}
@@ -320,7 +321,9 @@ export default class Register extends Component {
             />
           </Form>
         </div>
+        <span style={{'color':'red'}}>{this.state.successful}</span>
       </div>
+      
     );
   }
 }

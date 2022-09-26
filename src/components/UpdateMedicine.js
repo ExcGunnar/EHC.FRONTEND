@@ -31,6 +31,10 @@ class UpdateMedicine extends Component {
             console.log(result)
         }).catch(error=> {
         console.log(error)
+        if(error.response.status == 400)
+        {
+            this.setState({message:"Problem Updating Medicine in Database - Check that your fields are valid" ,medicineFields:{}}) 
+        };
         })
     }
   

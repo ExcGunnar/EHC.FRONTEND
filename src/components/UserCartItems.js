@@ -11,6 +11,7 @@ const UserCartItems = () => {
   const [currentItem, setCurrentProduct] = useState(null);
   const [currentIndex, setCurrentIndex] = useState(-1);
   const [currentDesc, setCurrentItem] = useState("");
+  const [orderPlaced, setOrderPlaced] = useState("");
 
   useEffect(() => {
     retrieveCartItems();
@@ -36,10 +37,20 @@ const UserCartItems = () => {
   const placeOrder = () => {
     CartService.placeOrder(user.id, cartItems)
       .then(response => {
-        console.log(response.data);
-        refreshList();
+        if(response.status == 200)
+        {
+          setOrderPlaced(response.data)
+
+          console.log(response.data);
+          refreshList();
+        }
+
       })
       .catch(e => {
+        if(e.response.status != 200)
+        {
+            setOrderPlaced("Error with order - not placed") 
+        };
         console.log(e);
       });
   };
@@ -217,6 +228,7 @@ const UserCartItems = () => {
           Clear Cart
         </button>
       </div>
+      <span style={{'color':'red'}}>{orderPlaced}</span>
     </div>
   );
 };

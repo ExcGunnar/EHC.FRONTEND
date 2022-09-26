@@ -18,14 +18,14 @@ const ReportTable = () => {
 
 //   };
 
-  CartService.getAllOrderDetails()
-  .then(response => {
-    setOrderDetails(response.data);
-    console.log(response.data);
-  })
-  .catch(e => {
-    console.log(e);
-  });
+  // CartService.getAllOrderDetails()
+  // .then(response => {
+  //   setOrderDetails(response.data);
+  //   console.log(response.data);
+  // })
+  // .catch(e => {
+  //   console.log(e);
+  // });
 
   const columns = [
     // { label: "Id", accessor: "id", sortable: true },
@@ -46,7 +46,7 @@ const ReportTable = () => {
             <div>
                 <Table 
                 caption="Sortable Reports Table"
-                data={items}//other.results
+                data={tableData1}//other.results
                 columns={columns}
                 />
             </div>

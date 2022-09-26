@@ -29,11 +29,12 @@ axios.get(API_URL + "/FindOrderById/" + orderFields.id, config).then(result=> {
     if(result.status==200){
         this.setState({message:"Order Status: " + result.data ,orderFields:{}})       
     }
-    // , setTimeout(5000)
-    else if (result.status!=200){
-        this.setState({message:"Problem Finding Order"}) }
 }
 ).catch(error=> {
+    if(error.response.status == 400)
+    {
+        this.setState({message:"Problem Finding Order - Make sure order id is valid or filled" ,updateUser:{}}) 
+    };
     console.log(error);
 })
 event.target.reset();

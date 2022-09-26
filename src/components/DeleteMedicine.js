@@ -37,6 +37,10 @@ axios.delete(API_URL + "/DeleteMedicineById/" + medicineFields.id, config).then(
 }
 ).catch(error=> {
     console.log(error);
+    if(error.response.status != 200)
+    {
+        this.setState({message:"Problem Deleting Medicine to Database - Medicine with id not found" ,medicineFields:{}}) 
+    };
 })
 event.target.reset();
 }

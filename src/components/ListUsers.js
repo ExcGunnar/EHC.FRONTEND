@@ -133,12 +133,12 @@ const ListUsers = () => {
               </label>{" "}
               {currentUser.address}
             </div>
-            <Link
+            {/* <Link
               to={"/users/" + currentUser.id}
               className="badge badge-warning"
             >
               Edit
-            </Link>
+            </Link> */}
           </div>
         ) : (
           <div>

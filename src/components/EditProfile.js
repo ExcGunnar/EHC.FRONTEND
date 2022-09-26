@@ -36,6 +36,10 @@ class UpdateUser extends Component {
             console.log(result)
         }).catch(error=> {
         console.log(error)
+        if(error.response.status == 400)
+        {
+            this.setState({message:"Problem Updating User Info - Check that your fields are valid" ,updateUser:{}}) 
+        };
         })
     }
   

@@ -26,11 +26,12 @@ axios.get(API_URL + "/FindAccountFundsById/" + user.id, config).then(result=> {
     if(result.status==200){
         this.setState({message:"Funds: $" + result.data ,orderFields:{}})       
     }
-    // , setTimeout(5000)
-    else if (result.status!=200){
-        this.setState({message:"Problem Finding Order"}) }
 }
 ).catch(error=> {
+    if(error.response.status != 200)
+    {
+        this.setState({message:"User funds missing or zero. Please contact the business" ,medicineFields:{}}) 
+    };
     console.log(error);
 })
 event.target.reset();

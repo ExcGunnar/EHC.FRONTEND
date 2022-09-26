@@ -32,11 +32,15 @@ axios.post(API_URL + "/AddMedicine", medicineFields, config).then(result=> {
     if(result.status==200){
         this.setState({message:"Medicine Added to Database",medicineFields:{}})       
     }
-    else if (result.status!=200){
+    else{
         this.setState({message:"Problem Adding Medicine to Database"}) }
 }
 ).catch(error=> {
-    console.log(error);
+    console.log(error)
+    if(error.response.status == 400)
+    {
+        this.setState({message:"Problem Adding Medicine to Database - Check that your fields are valid" ,medicineFields:{}}) 
+    };
 })
 event.target.reset();
 }
