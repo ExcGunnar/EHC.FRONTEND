@@ -51,47 +51,47 @@ render() {
             <div className="row">
                 <div className="col-md-8"><h2>Add Medicine Details</h2></div>
             </div>
-            <div className="row">
+            <div data-testid="name" className="row">
                 <div className="col-md-4"><label>Name</label></div>
                 <div className="col-md-4"><input type="text" name="name"  
                 onChange={this.changeHandle} className="form-control"/></div>
             </div>   
             
-            <div className="row">
+            <div data-testid="companyName" className="row">
                 <div className="col-md-4"><label>Company Name</label></div>
                 <div className="col-md-4"><input type="text" name="companyName"  
                 onChange={this.changeHandle} className="form-control"/></div>
             </div>
 
-            <div className="row">
+            <div data-testid="price" className="row">
                 <div className="col-md-4"><label>Price</label></div>
                 <div className="col-md-4">
                 <input type="number" name="price" onChange={this.changeHandle}
                 className="form-control"/></div>
             </div>
             
-            <div className="row">
+            <div data-testid="quantity" className="row">
                 <div className="col-md-4"><label>Quantity</label></div>
                 <div className="col-md-4">
                 <input type="number" name="quantity" onChange={this.changeHandle}
                 className="form-control"/></div>
             </div>
 
-            <div className="row">
+            <div data-testid="imageUrl" className="row">
                 <div className="col-md-4"><label>Image URL</label></div>
                 <div className="col-md-4">
                 <input type="url" name="imageUrl" onChange={this.changeHandle}
                 className="form-control"/></div>
             </div>
 
-            <div className="row">
+            <div data-testid="uses" className="row">
                 <div className="col-md-4"><label>Uses</label></div>
                 <div className="col-md-4">
                 <input type="text" name="uses" onChange={this.changeHandle}
                 className="form-control"/></div>
             </div>
 
-            <div className="row">
+            <div data-testid="expireDate" className="row">
                 <div className="col-md-4"><label>Expire Date</label></div>
                 <div className="col-md-4">
                 <input type="text" name="expireDate" onChange={this.changeHandle}
@@ -102,7 +102,7 @@ render() {
             
             <div className="row">
                 <div className="col-md-4">
-                <input type="submit" value="Add Medicine" className="btn btn-success"/>
+                <input data-testid="submit" type="submit" value="Add Medicine" className="btn btn-success"/>
                 </div>
                 <div className="col-md-3">
                 <input type="reset" value="Reset" className="btn btn-info"/> 
@@ -110,7 +110,7 @@ render() {
             </div>
                 
             </form>
-            <span id="returnMessage" style={{'color':'red'}}>{this.state.message}</span>
+            <span data-testid="returnMessage" id="returnMessage" style={{'color':'red'}}>{this.state.message}</span>
         </div>
     )
 }

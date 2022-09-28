@@ -52,53 +52,53 @@ class UpdateUser extends Component {
                 </div>
                 <div className="row">
                     <div className="col-md-4"><label>First Name</label></div>
-                    <div className="col-md-4"><input type="text" name="firstName"  
+                    <div data-testid="firstName" className="col-md-4"><input type="text" name="firstName"  
                     onChange={this.changeHandle} className="form-control"/></div>
                 </div>   
                 
                 <div className="row">
                     <div className="col-md-4"><label>Last Name</label></div>
-                    <div className="col-md-4"><input type="text" name="lastName"  
+                    <div data-testid="lastName" className="col-md-4"><input type="text" name="lastName"  
                     onChange={this.changeHandle} className="form-control"/></div>
                 </div>
     
                 <div className="row">
                     <div className="col-md-4"><label>Email</label></div>
-                    <div className="col-md-4"><input type="text" name="email"  
+                    <div data-testid="email" className="col-md-4"><input type="text" name="email"  
                     onChange={this.changeHandle} className="form-control"/></div>
                 </div>
 
                 <div className="row">
                     <div className="col-md-4"><label>Password</label></div>
-                    <div className="col-md-4">
+                    <div data-testid="password" className="col-md-4">
                     <input type="text" name="password" onChange={this.changeHandle}
                     className="form-control"/></div>
                 </div>
                 
                 <div className="row">
                     <div className="col-md-4"><label>DoB</label></div>
-                    <div className="col-md-4">
+                    <div data-testid="dateOfBirth" className="col-md-4">
                     <input type="date" name="dateOfBirth" onChange={this.changeHandle}
                     className="form-control"/></div>
                 </div>
     
                 <div className="row">
                     <div className="col-md-4"><label>Phone</label></div>
-                    <div className="col-md-4">
+                    <div data-testid="phone" className="col-md-4">
                     <input type="tel" name="phone" onChange={this.changeHandle}
                     className="form-control"/></div>
                 </div>
     
                 <div className="row">
                     <div className="col-md-4"><label>Address</label></div>
-                    <div className="col-md-4">
+                    <div data-testid="address" className="col-md-4">
                     <input type="text" name="address" onChange={this.changeHandle}
                     className="form-control"/></div>
                 </div>
                  
                 <div className="row">
                     <div className="col-md-4">
-                    <input type="submit" value="Update User" className="btn btn-success"/>
+                    <input data-testid="submit" type="submit" value="Update User" className="btn btn-success"/>
                     </div>
                     <div className="col-md-3">
                     <input type="reset" value="Reset" className="btn btn-info"/> 

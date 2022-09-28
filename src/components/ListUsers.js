@@ -81,12 +81,12 @@ const ListUsers = () => {
             ))}
         </ul>
       </div>
-      <div className="col-md-6">
+      <div data-testid="List" className="col-md-6">
         {currentUser ? (
           <div>
             <h4>User</h4>
             <div>
-              <label>
+              <label> 
                 <strong>First Name:</strong>
               </label>{" "}
               {currentUser.firstName}

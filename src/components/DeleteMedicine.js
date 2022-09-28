@@ -52,7 +52,7 @@ render() {
                 <div className="col-md-8"><h2>Delete Medicine</h2></div>
             </div>
             <div className="row">
-                <div className="col-md-4"><label>Id</label></div>
+                <div data-testid="id" className ="col-md-4"><label>Id</label></div>
                 <div className="col-md-4"><input type="text" name="id"  
                 onChange={this.changeHandle} className="form-control"/></div>
             </div>   
@@ -60,7 +60,7 @@ render() {
             
             <div className="row">
                 <div className="col-md-4">
-                <input type="submit" value="Delete Medicine" className="btn btn-success"/>
+                <input data-testid="submit" type="submit" value="Delete Medicine" className="btn btn-success"/>
                 </div>
                 <div className="col-md-3">
                 <input type="reset" value="Reset" className="btn btn-info"/> 
