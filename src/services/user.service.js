@@ -1,6 +1,6 @@
 import axios from "axios";
 import authHeader from "./auth.header";
-const API_URL = "http://localhost:5000/Ehc/";
+const API_URL = "http://localhost:30499/Ehc/";
 const getPublicContent = () => {
   return axios.get(API_URL + "all"); 
 

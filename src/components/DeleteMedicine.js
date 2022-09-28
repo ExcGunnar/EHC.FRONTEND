@@ -1,7 +1,7 @@
 import axios from 'axios';
 import {Component} from 'react'
 import authHeader from "../services/auth.header";
-const API_URL = "http://localhost:5000/Ehc/Medicine";
+const API_URL = "http://localhost:30499/Ehc/Medicine";
 
 const headerBase = authHeader().authorization
 const config = {
